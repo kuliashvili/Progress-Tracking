@@ -1,0 +1,95 @@
+.header {
+  width: 100%;
+  background-color: #fff;
+  border-bottom: 1px solid #eaeaea;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1920px;
+  height: 100px;
+  margin: 0 auto;
+  padding: 0px 120px;
+}
+
+.logo-link {
+  text-decoration: none;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-text {
+  font-size: 24px;
+  font-weight: 700;
+  color: #7749f8;
+  margin-right: 8px;
+}
+
+.logo-icon {
+  font-size: 24px;
+}
+
+.header-actions {
+  display: flex;
+  gap: 40px;
+}
+
+.header-button {
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+}
+
+.employee-button {
+  min-width: 230px;
+  height: 40px;
+  background-color: #fff;
+  border-radius: 5px;
+  border: 1px solid rgba(131, 56, 236, 1);
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.employee-button:hover {
+  background-color: #f5f5f5;
+}
+
+.task-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #7749f8;
+  color: white;
+  text-decoration: none;
+  min-width: 270px;
+  height: 40px;
+  border-radius: 5px;
+  padding: 10px 20px;
+  text-align: center;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.task-button:hover {
+  background-color: #6434e6;
+}
+
+.pluse-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 5px;
+}
