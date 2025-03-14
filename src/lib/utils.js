@@ -11,8 +11,9 @@ export function formatDate(dateString) {
     
     const day = date.getDate();
     const month = months[date.getMonth()];
+    const year = date.getFullYear()
     
-    return `${day} ${month}`;
+    return `${day} ${month}, ${year}`;
   }
 
   export function truncateText(text, maxLength = 100) {

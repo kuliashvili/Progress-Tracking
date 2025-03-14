@@ -56,13 +56,19 @@
 .filter-dropdown,
 .department-dropdown-panel {
   position: absolute;
-  top: calc(100% + 8px);
+  top: calc(100% + 18px);
   left: 0;
   background: white;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  border: 1px solid rgba(131, 56, 236, 1);
   z-index: 10;
   display: none; 
+}
+
+.department-dropdown-panel {
+  width: 700px;
+  height: 400px;
+  padding: 40px 30px;
 }
 
 .filter-group.open .filter-dropdown,
@@ -71,17 +77,8 @@
 }
 
 .filter-dropdown {
-  min-width: 220px;
+  min-width: 250px;
   padding: 12px;
-}
-
-.department-dropdown-panel {
-  width: 700px;
-  height: 400px;
-  top: calc(100% + 18px);
-  border-radius: 12px;
-  padding: 40px 30px;
-  border: 1px solid rgba(222, 226, 230, 1);
 }
 
 
@@ -111,6 +108,9 @@
 }
 .filter-option {
   margin-bottom: 20px;
+}
+.filter-radio{
+  margin-bottom: 10px;
 }
 .filter-option,
 .filter-radio {

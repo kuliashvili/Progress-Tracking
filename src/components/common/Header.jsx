@@ -20,7 +20,6 @@ const Header = () => {
   };
 
   const handleEmployeeCreated = (newEmployee) => {
-  
     console.log("New employee created dasatestad:", newEmployee);
   };
 
