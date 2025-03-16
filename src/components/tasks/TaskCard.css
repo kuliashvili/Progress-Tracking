@@ -194,3 +194,9 @@
   font-size: 14px;
   color: rgba(33, 37, 41, 1);
 }
+
+.task-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}

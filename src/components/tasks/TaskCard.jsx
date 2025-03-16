@@ -6,6 +6,7 @@ import lowIcon from "../../../public/images/low.svg";
 import mediumIcon from "../../../public/images/medium.svg";
 import commentIcon from "../../../public/images/comment.svg";
 import Image from "next/image";
+import Link from "next/link";
 
 const TaskCard = ({ task }) => {
   // Get task status class
@@ -101,58 +102,60 @@ const TaskCard = ({ task }) => {
   };
 
   return (
-    <div className={`task-card ${getTaskStatusClass(task.status)}`}>
-      <div className="task-card-header">
-        <div className="task-meta">
-          {task.priority && (
-            <span
-              className={`priority-badge ${getPriorityClass(task.priority)}`}
-            >
-              {getPriorityIcon(task.priority)}
-              {getPriorityDisplay(task.priority)}
-            </span>
-          )}
-          {task.department && (
-            <span
-              className={`department-badge ${
-                getDepartmentInfo(task.department).className
-              }`}
-            >
-              {getDepartmentInfo(task.department).display}
-            </span>
-          )}
-        </div>
-        {task.due_date && (
-          <span className="due-date">{formatDate(task.due_date)}</span>
-        )}
-      </div>
-
-      <div className="task-card-content">
-        <h3 className="task-title">{task.name}</h3>
-        <p className="task-description">{truncateText(task.description)}</p>
-      </div>
-
-      <div className="task-card-footer">
-        {task.employee && (
-          <div className="employee-avatar">
-            {task.employee.avatar ? (
-              <img
-                src={task.employee.avatar}
-                alt={`${task.employee.name} ${task.employee.surname || ""}`}
-              />
-            ) : (
-              <span>
-                {task.employee.name ? task.employee.name.charAt(0) : "?"}
+    <Link href={`/tasks/${task.id}`} className="task-card-link">
+      <div className={`task-card ${getTaskStatusClass(task.status)}`}>
+        <div className="task-card-header">
+          <div className="task-meta">
+            {task.priority && (
+              <span
+                className={`priority-badge ${getPriorityClass(task.priority)}`}
+              >
+                {getPriorityIcon(task.priority)}
+                {getPriorityDisplay(task.priority)}
+              </span>
+            )}
+            {task.department && (
+              <span
+                className={`department-badge ${
+                  getDepartmentInfo(task.department).className
+                }`}
+              >
+                {getDepartmentInfo(task.department).display}
               </span>
             )}
           </div>
-        )}
-        <div className="comment-count">
-          <Image width={20} height={20} src={commentIcon} alt="Comment Icon" />
-          <span>{task.total_comments || "0"}</span>
+          {task.due_date && (
+            <span className="due-date">{formatDate(task.due_date)}</span>
+          )}
+        </div>
+
+        <div className="task-card-content">
+          <h3 className="task-title">{task.name}</h3>
+          <p className="task-description">{truncateText(task.description)}</p>
+        </div>
+
+        <div className="task-card-footer">
+          {task.employee && (
+            <div className="employee-avatar">
+              {task.employee.avatar ? (
+                <img
+                  src={task.employee.avatar}
+                  alt={`${task.employee.name} ${task.employee.surname || ""}`}
+                />
+              ) : (
+                <span>
+                  {task.employee.name ? task.employee.name.charAt(0) : "?"}
+                </span>
+              )}
+            </div>
+          )}
+          <div className="comment-count">
+            <Image width={20} height={20} src={commentIcon} alt="Comment Icon" />
+            <span>{task.total_comments || "0"}</span>
+          </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 
