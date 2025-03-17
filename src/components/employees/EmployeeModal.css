@@ -141,6 +141,7 @@
   background-position: right 14px top 14px;
   background-size: 16px;
   padding-right: 40px;
+  width: 390px;
 }
 .validation-item {
   display: flex;
@@ -201,6 +202,12 @@
   /* padding: 32px; */
   height: 100%;
   width: 100%;
+}
+.upload-content-header{
+font-weight: 400;
+font-size: 14px;
+color: #343A40;
+
 }
 .file-input {
   position: absolute;
@@ -280,7 +287,7 @@
   cursor: pointer;
   font-size: 16px;
   font-weight: 500;
-  transition: background-color 0.2s;
+  background-color: white;
 }
 
 .submit-button {
@@ -294,9 +301,16 @@
   font-weight: 500;
   transition: background-color 0.2s;
 }
+.submit-button:hover{
+  background-color: #B588F4;
+}
 
 .submit-button:disabled,
 .cancel-button:disabled {
   opacity: 0.6;
   cursor: not-allowed;
+}
+
+.upload-image-icon{
+  margin-bottom: 7px;
 }
