@@ -1,36 +1,46 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Momentum Task Management
 
-## Getting Started
+A task management web application built with Next.js that helps teams track and organize their work.
 
-First, run the development server:
+## Live Demo
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Check out the live application at: [https://momentum.giokulo.com/](https://momentum.giokulo.com/)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**Note:** This website is optimized for 1920x1080 resolution and is not responsive.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Features
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Task Dashboard**: View all tasks organized by their status
+- **Task Filtering**: Filter tasks by department, priority, or employee
+- **Task Details**: View complete information about each task
+- **Comments System**: Discuss tasks with team members through comments
+- **Task Creation**: Add new tasks with detailed information
+- **Employee Management**: Add new team members to the system
 
-## Learn More
+## Technologies Used
 
-To learn more about Next.js, take a look at the following resources:
+- Next.js
+- React
+- CSS (without frameworks)
+- RESTful API integration
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## How to Use
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. **View Tasks**: On the homepage, you can see all tasks organized by status
+2. **Filter Tasks**: Use the filter options at the top to narrow down tasks
+3. **Task Details**: Click on any task card to view its complete details
+4. **Add Comments**: On the task detail page, you can add comments or reply to existing ones
+5. **Create Tasks**: Click the "Create New Task" button to add a new task
+6. **Add Employees**: Click the "Create Employee" button to add new team members
 
-## Deploy on Vercel
+## Project Structure
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- `/app`: Main application pages
+- `/components`: Reusable React components
+- `/services`: API integration services
+- `/public`: Static assets
+- `/lib`: Utility functions
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Development
+
+This project was developed as part of a frontend challenge.
